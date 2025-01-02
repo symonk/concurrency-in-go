@@ -75,6 +75,7 @@ evaluate,  these are known as the `Coffman Conditions`:
 > [!Note]
 > Preventing even one of the 4 conditions above, can help prevent deadlocking!
 
+
 > [!Info]
 > Try to limit the scope of locking to critical sections to start, rather than being broad with locking
 > see the starvation example.  It is much easier to widen the locking later, than to reduce it.
