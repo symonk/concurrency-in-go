@@ -4,7 +4,7 @@ This repository shares my learning materials from study `concurrency-in-go` writ
 [Katherine Cox Buday](https://github.com/kat-co).  The book is excellent and using this
 repository along side studying the book can add some extra benefit.
 
-The book in question can be purchases to support Katherine via `oreilly` at [Book](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/)
+The book in question can be purchases to support Katherine via `oreilly` at [Concurrency in Go](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/)
 
 -----
 
