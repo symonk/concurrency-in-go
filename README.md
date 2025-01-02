@@ -77,18 +77,16 @@ evaluate,  these are known as the `Coffman Conditions`:
 
 > [!Note]
 > Preventing even one of the 4 conditions above, can help prevent deadlocking!
->
-
-
-> [!Info]
-> Try to limit the scope of locking to critical sections to start, rather than being broad with locking
-> see the starvation example.  It is much easier to widen the locking later, than to reduce it.
 
 [Deadlocking Mutexes (Coffman Conditions Explained)](internal/deadlocking/deadlock.go)
 
 [Livelocking](internal/deadlocking/livelock.go)
 
 [Starvation](internal/deadlocking/starvation.go)
+
+> [!Info]
+> Try to limit the scope of locking to critical sections to start, rather than being broad with locking
+> see the starvation example.  It is much easier to widen the locking later, than to reduce it.
 
 Smart abstractions and documentation are **vital** when concurrency is involved.  An example of how to
 make things easier for developers consuming (or maintaining) your code in future is displayed in the
