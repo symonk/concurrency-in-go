@@ -85,11 +85,11 @@ evaluate,  these are known as the `Coffman Conditions`:
 > Try to limit the scope of locking to critical sections to start, rather than being broad with locking
 > see the starvation example.  It is much easier to widen the locking later, than to reduce it.
 
-[Locking: Deadlock](internal/deadlocking/deadlock.go)
+[Locking: Deadlock](locking_deadlock/main.go)
 
-[Locking: Livelock](internal/deadlocking/livelock.go)
+[Locking: Livelock](locking_livelock/main.go)
 
-[Locking: Starvation](internal/deadlocking/starvation.go)
+[Locking: Starvation](locking_starvation/main.go)
 
 Smart abstractions and documentation are **vital** when concurrency is involved.  An example of how to
 make things easier for developers consuming (or maintaining) your code in future is displayed in the
