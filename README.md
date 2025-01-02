@@ -6,7 +6,7 @@ The material outlined below is in logical order for learning all about go concur
 learning approach to understanding go concurrency.
 
 The material here is from my learnings of the `concurrency-in-go` book written by
-https://github.com/kat-co and proved to be an excellent book.  You can purchase the
+[Katherine Cox-Buday] https://github.com/kat-co and proved to be an excellent book.  You can purchase the
 book from `oreilly` here: [Concurrency In Go Book](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/)
 
 -----
@@ -23,7 +23,9 @@ things are scaled up.
 > an anti-pattern and should strongly be avoided.
 
 [A basic data race](internal/race/race.go)
+
 [A Naive Fix](internal/race/sleeps.go)
+
 [Controlling Context Switching Manually](internal/race/gosched.go)
 
 -----
@@ -45,6 +47,7 @@ considered.
 > have function docstrings articulate when this is (or isn't) the case
 
 [Understanding simple atomicity](internal/atomicity/simple_increment.go)
+
 [Ensuring atomicity (Naive)](internal/atomicity/ensuring_atomicity.go)
 
 
@@ -63,10 +66,10 @@ In order to understand where deadlocking can occur, there are a few conditions w
 evaluate,  these are known as the `Coffman Conditions`:
 
 
-- `Mutual Exclusion`: A concurrent process holds exclusive rights to a resource at any time.
-- `Wait-For Condition`: A concurrent process must simultaneously hold a resource and wait for another.
-- `No Premption`: A resource held by a concurrent process can only be released by that process itself.
-- `Circular Wait`: A concurrent Process (P1) must be waiting on a chain of other concurrent processes
+* `Mutual Exclusion`: A concurrent process holds exclusive rights to a resource at any time.
+* `Wait-For Condition`: A concurrent process must simultaneously hold a resource and wait for another.
+* `No Premption`: A resource held by a concurrent process can only be released by that process itself.
+* `Circular Wait`: A concurrent Process (P1) must be waiting on a chain of other concurrent processes
 (P2, ...PN), which are in turn waiting on it (P1).
 
 > [!Note]
@@ -77,7 +80,9 @@ evaluate,  these are known as the `Coffman Conditions`:
 > see the starvation example.  It is much easier to widen the locking later, than to reduce it.
 
 [Deadlocking Mutexes (Coffman Conditions Explained)](internal/deadlocking/deadlock.go)
+
 [Livelocking](internal/deadlocking/livelock.go)
+
 [Starvation](internal/deadlocking/starvation.go)
 
 Smart abstractions and documentation are **vital** when concurrency is involved.  An example of how to
