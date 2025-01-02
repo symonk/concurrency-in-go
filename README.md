@@ -25,11 +25,11 @@ things are scaled up.
 > Attempting to manually force goroutine scheduling / context switching is considered
 > an anti-pattern and should strongly be avoided.
 
-[A basic data race](internal/race/race.go)
+[Race Conditions: A basic Introduction](internal/race/race.go)
 
-[A Naive Fix](internal/race/sleeps.go)
+[Race Conditions: A Naive Fix](internal/race/sleeps.go)
 
-[Controlling Context Switching Manually](internal/race/gosched.go)
+[Race Conditions: Causing a context switch](internal/race/gosched.go)
 
 -----
 
