@@ -17,7 +17,7 @@ The book in question can be purchases to support Katherine via `oreilly` at [Con
 ### :tent: Race Conditions
 
 A `race condition` occurs when code written has a naive expectation on execution
-order.  Often a develop expects the code written to execute as it is written.
+order.  Often a developer expects the code written to execute as it is written.
 These kinds of bugs can often be hard(er) to debug and can lie hidden until 
 things are scaled up.  
 
