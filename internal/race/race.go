@@ -16,7 +16,7 @@ import "fmt"
 // Running this may require many iterations to see all of these cases, but no they are there.  Often it takes a
 // slight change to some parameters, such as bigger scale, more users, delays, latency etc for these kinds of bugs
 // to appear, but they can be very costly and harder to fix/debug.
-func SimpleDataRace() {
+func RaceConditionDemo() {
 	var number int // create a new int (size dependent on architecture) with the default falsy value (0).
 	go func() {
 		number++

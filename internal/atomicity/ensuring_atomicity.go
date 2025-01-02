@@ -9,7 +9,7 @@ import (
 // Go others a few options here.  The trick comes with minimising
 // these concepts around `critical sections` of code to guarantee
 // correctness with the least performance impact.
-func ensuringAtomicity() {
+func EnsuringAtomicityNaiveDemo() {
 
 	// A basic data race
 	var n int

@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// AvoidSleeps demonstrates the naive approach people often take when
+// NaiveFixDemo demonstrates the naive approach people often take when
 // starting out to try and avoid a data race.
 //
 // This example mirrors that of the one in race.go, however it sprinkles
@@ -18,7 +18,7 @@ import (
 // often soon follow.
 //
 // runtime.GoSched() would be an alternative here, but again do NOT do it!
-func AvoidSleeps() {
+func NaiveFixDemo() {
 	var number int
 	go func() { number++ }()
 	time.Sleep(time.Second)
