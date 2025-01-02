@@ -1,13 +1,16 @@
 # concurrency-in-go
 
-My learning materials for understanding and master concurrency in go.
-The material outlined below is in logical order for learning all about go concurrency
-(including sample code) and should be followed in order to get a structured
-learning approach to understanding go concurrency.
+This repository shares my learning materials from study `concurrency-in-go` written by
+[Katherine Cox Buday](https://github.com/kat-co).  The book is excellent and using this
+repository along side studying the book can add some extra benefit.
 
-The material here is from my learnings of the `concurrency-in-go` book written by
-[Katherine Cox-Buday] https://github.com/kat-co and proved to be an excellent book.  You can purchase the
-book from `oreilly` here: [Concurrency In Go Book](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/)
+The book in question can be purchases to support Katherine via `oreilly` at [Book](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/)
+
+-----
+
+### :tent: Table of Contents
+
+
 
 -----
 
