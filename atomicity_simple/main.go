@@ -1,6 +1,6 @@
-package atomicity
+package main
 
-// AtomicityIntroductionDemo demonstrates what at a glance looks like
+// main demonstrates what at a glance looks like
 // a potentially atomic operation, a simple increment.
 //
 // Under thorough inspection there is actually multiple operations
@@ -8,7 +8,7 @@ package atomicity
 // threaded / goroutine context OR this code is isolated within a
 // single goroutine in a parallel context, it is also considered atomic
 // as no other routines have access to the data, it is encapsulated within.
-func AtomicityIntroductionDemo() {
+func main() {
 	var i int
 	// Three operations occur here as far as instructions go
 	// 1. Retrieve the value in `i`.

@@ -52,9 +52,9 @@ considered.
 > guard the critical sections is error prone, try and build this into your APIs and
 > have function docstrings articulate when this is (or isn't) the case
 
-[Atomicity: A Basic Introduction](internal/atomicity/simple_increment.go)
+[Atomicity: A Basic Introduction](atomicity_simple/main.go)
 
-[Atomicity: A Naive Solution](internal/atomicity/ensuring_atomicity.go)
+[Atomicity: A Naive Solution](atomicity_naive/main.go)
 
 
 -----

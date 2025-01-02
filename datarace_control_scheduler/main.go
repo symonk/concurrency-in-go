@@ -9,10 +9,10 @@ import (
 // erradicate a data race, this is an awful idea and should be avoided.
 func main() {
 	var i int
-	go func() { i++ }() // read & write
+	go func() { i++ }()
 	runtime.Gosched()
-	if i == 0 { // read
-		fmt.Println(i) // read
+	if i == 0 {
+		fmt.Println(i)
 	}
 
 }

@@ -13,11 +13,11 @@ import "fmt"
 // to appear, but they can be very costly and harder to fix/debug.
 func main() {
 	var i int
-	go func() { i++ }() // read & write
-	if i == 0 {         // read
-		fmt.Println(i) // read
-		if i != 0 {    //  read
-			fmt.Println(i) // read
+	go func() { i++ }()
+	if i == 0 {
+		fmt.Println(i)
+		if i != 0 {
+			fmt.Println(i)
 		}
 	}
 }

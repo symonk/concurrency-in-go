@@ -9,8 +9,7 @@ import (
 // Go others a few options here.  The trick comes with minimising
 // these concepts around `critical sections` of code to guarantee
 // correctness with the least performance impact.
-func EnsuringAtomicityNaiveDemo() {
-
+func main() {
 	// A basic data race
 	var n int
 	go func() { n++ }() // critical section (1 - write)
