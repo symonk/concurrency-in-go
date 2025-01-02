@@ -15,7 +15,7 @@ func main() {
 	var i int
 	go func() { i++ }() // read & write
 	time.Sleep(time.Second)
-	if i == 0 { // raed
+	if i == 0 { // read
 		fmt.Println(i) // read
 	}
 }
