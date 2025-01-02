@@ -1,4 +1,4 @@
-# concurrency-in-go
+##### concurrency-in-go <!-- no toc -->
 
 This repository shares my learning materials from study `concurrency-in-go` written by
 [Katherine Cox Buday](https://github.com/kat-co).  The book is excellent and using this
@@ -8,18 +8,16 @@ The book in question can be purchases to support Katherine via `oreilly` at [Con
 
 -----
 
-### Table of Contents
+#### Table of Contents <!-- no toc -->
 
-- [concurrency-in-go](#concurrency-in-go)
-    - [Table of Contents](#table-of-contents)
-  - [:tent: Race Conditions](#tent-race-conditions)
-  - [:tent: Atomicity](#tent-atomicity)
-  - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
-  - [:tent: Communication Sequential Processes](#tent-communication-sequential-processes)
+- [:tent: Race Conditions](#tent-race-conditions)
+- [:tent: Atomicity](#tent-atomicity)
+- [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
+- [:tent: Communication Sequential Processes](#tent-communication-sequential-processes)
 
 -----
 
-## :tent: Race Conditions
+# :tent: Race Conditions
 
 A `race condition` occurs when code written has a naive expectation on execution
 order.  Often a developer expects the code written to execute as it is written.
@@ -38,7 +36,7 @@ things are scaled up.
 
 -----
 
-## :tent: Atomicity
+# :tent: Atomicity
 
 `Atomicity` is the concept that something is indivisible or uninterruptable within
 a particular `context`.  Context is **very** important here.  Something that is
@@ -61,7 +59,7 @@ considered.
 
 -----
 
-## :tent: Dead Locking & Starvation
+# :tent: Dead Locking & Starvation
 
 At a basic level, ensuring atomicity with locking critical sections is not the be all and
 end all.  All of this can be done however you can still run into other problems, such as
@@ -101,7 +99,7 @@ make things easier for developers consuming (or maintaining) your code in future
 
 -----
 
-## :tent: Communication Sequential Processes
+# :tent: Communication Sequential Processes
 
 
 
