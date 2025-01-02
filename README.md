@@ -8,8 +8,14 @@ The book in question can be purchases to support Katherine via `oreilly` at [Con
 
 -----
 
-### :tent: Table of Contents
+##### Table of Contents
 
+- [concurrency-in-go](#concurrency-in-go)
+        - [Table of Contents](#table-of-contents)
+    - [:tent: Race Conditions](#tent-race-conditions)
+    - [:tent: Atomicity](#tent-atomicity)
+    - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
+    - [Communication Sequential Processes](#communication-sequential-processes)
 
 
 -----
@@ -25,11 +31,11 @@ things are scaled up.
 > Attempting to manually force goroutine scheduling / context switching is considered
 > an anti-pattern and should strongly be avoided.
 
-[Race Conditions: A basic Introduction](internal/race/race.go)
+[Race Conditions: A basic Introduction](datarace_simple/main.go)
 
-[Race Conditions: A Naive Fix](internal/race/sleeps.go)
+[Race Conditions: A Naive Fix](datarace_sleep/main.go)
 
-[Race Conditions: Causing a context switch](internal/race/gosched.go)
+[Race Conditions: Causing a context switch](datarace_control_scheduler/main.go)
 
 -----
 
