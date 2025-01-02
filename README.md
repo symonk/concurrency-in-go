@@ -11,7 +11,7 @@ book from `oreilly` here: [Concurrency In Go Book](https://www.oreilly.com/libra
 
 -----
 
-### Race Conditions
+### :tent: Race Conditions
 
 A `race condition` occurs when code written has a naive expectation on execution
 order.  Often a develop expects the code written to execute as it is written.
@@ -28,7 +28,7 @@ things are scaled up.
 
 -----
 
-### Atomicity
+### :tent: Atomicity
 
 `Atomicity` is the concept that something is indivisible or uninterruptable within
 a particular `context`.  Context is **very** important here.  Something that is
@@ -50,7 +50,7 @@ considered.
 
 -----
 
-### Dead Locking & Starvation
+### :tent: Dead Locking & Starvation
 
 At a basic level, ensuring atomicity with locking critical sections is not the be all and
 end all.  All of this can be done however you can still run into other problems, such as
@@ -62,10 +62,11 @@ This section covers case of dead locking, live locking and starvation.
 In order to understand where deadlocking can occur, there are a few conditions we can
 evaluate,  these are known as the `Coffman Conditions`:
 
-* `Mutual Exclusion`: A concurrent process holds exclusive rights to a resource at any time.
-* `Wait-For Condition`: A concurrent process must simultaneously hold a resource and wait for another.
-* `No Premption`: A resource held by a concurrent process can only be released by that process itself.
-* `Circular Wait`: A concurrent Process (P1) must be waiting on a chain of other concurrent processes
+
+- `Mutual Exclusion`: A concurrent process holds exclusive rights to a resource at any time.
+- `Wait-For Condition`: A concurrent process must simultaneously hold a resource and wait for another.
+- `No Premption`: A resource held by a concurrent process can only be released by that process itself.
+- `Circular Wait`: A concurrent Process (P1) must be waiting on a chain of other concurrent processes
 (P2, ...PN), which are in turn waiting on it (P1).
 
 > [!Note]
