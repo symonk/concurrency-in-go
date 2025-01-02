@@ -77,6 +77,7 @@ evaluate,  these are known as the `Coffman Conditions`:
 
 > [!Note]
 > Preventing even one of the 4 conditions above, can help prevent deadlocking!
+>
 
 
 > [!Info]
