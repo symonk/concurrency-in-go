@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// main demonstrates how a channel can be used to retrieve
+// values one at a time, limiting the memory usage.
 func main() {
 	g := generator(10, 20)
 	for i := range g {
