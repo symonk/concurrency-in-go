@@ -110,7 +110,7 @@ A collective of patterns with explanations can be found below:
 
 | Pattern                                                   | Summary                                             |
 |-----------------------------------------------------------|-----------------------------------------------------|
-| [01 Goroutine](hello_world_goroutine/main.go)             | A simple introduction to goroutines.
-|
+| [01 Basic Goroutine](hello_world_goroutine/main.go)       | A simple introduction to goroutines.
+| [02 Basic Channel](hello_world_chan/main.go)              | A simple introduction to channels.                  |
 
 -----
