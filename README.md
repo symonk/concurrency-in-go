@@ -14,6 +14,7 @@ The book in question can be purchases to support Katherine via `oreilly` at [Con
 - [:tent: Atomicity](#tent-atomicity)
 - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
 - [:tent: Communication Sequential Processes](#tent-communication-sequential-processes)
+- [:tent: Patterns](#tent-patterns)
 
 -----
 
@@ -102,5 +103,14 @@ make things easier for developers consuming (or maintaining) your code in future
 ## :tent: Communication Sequential Processes
 
 
+## :tent: Patterns
+
+A collective of patterns with explanations can be found below:
+
+
+| Pattern                                                   | Summary                                             |
+|-----------------------------------------------------------|-----------------------------------------------------|
+| [01 Goroutine](hello_world_goroutine/main.go)             | A simple introduction to goroutines.
+|
 
 -----
