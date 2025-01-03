@@ -14,6 +14,7 @@ The book in question can be purchases to support Katherine via `oreilly` at [Con
 - [:tent: Atomicity](#tent-atomicity)
 - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
 - [:tent: Communication Sequential Processes](#tent-communication-sequential-processes)
+- [:tent: Synchronisation Primities](#tent-synchronisation-primities)
 - [:tent: Patterns](#tent-patterns)
 
 -----
@@ -103,6 +104,13 @@ make things easier for developers consuming (or maintaining) your code in future
 ## :tent: Communication Sequential Processes
 
 
+-----
+
+## :tent: Synchronisation Primities
+
+-----
+
+
 ## :tent: Patterns
 
 A collective of patterns with explanations can be found below:
@@ -110,7 +118,8 @@ A collective of patterns with explanations can be found below:
 
 | Pattern                                                   | Summary                                             |
 |-----------------------------------------------------------|-----------------------------------------------------|
-| [01 Basic Goroutine](hello_world_goroutine/main.go)       | A simple introduction to goroutines.
+| [01 Basic Goroutine](hello_world_goroutine/main.go)       | A simple introduction to goroutines.                |
 | [02 Basic Channel](hello_world_chan/main.go)              | A simple introduction to channels.                  |
+| [03 Generator](generator/main.go)                         | A python like generator                             |
 
 -----
