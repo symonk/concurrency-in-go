@@ -10,7 +10,7 @@ import (
 // consolidating data from multiple goroutines.
 func main() {
 	// invoke a long running io function, three times.
-	a, b, c := someIO(), someIO(), someIO()
+	a, b, c := someIO(20), someIO(20), someIO(20)
 	fanned := fanIn(a, b, c)
 	for element := range fanned {
 		fmt.Println(element)
@@ -27,14 +27,8 @@ func fanIn(ch ...<-chan status) <-chan status {
 	for _, channel := range ch {
 		go func(c <-chan status) {
 			defer wg.Done()
-			for {
-				select {
-				case v, ok := <-c:
-					if !ok {
-						return
-					}
-					out <- v
-				}
+			for v := range c {
+				out <- v
 			}
 		}(channel)
 	}
@@ -54,14 +48,20 @@ type status struct {
 }
 
 // someIO simulates a long running function.
-func someIO() <-chan status {
-	c := make(chan status, 20)
-	go func() {
-		defer close(c)
-		for i := range 20 {
+func someIO(size int) <-chan status {
+	c := make(chan status, size)
+	var wg sync.WaitGroup
+	wg.Add(size)
+	for i := range size {
+		go func(i int) {
+			defer wg.Done()
 			time.Sleep(200 * time.Millisecond)
 			c <- status{code: i, message: fmt.Sprintf("message %d", i)}
-		}
+		}(i)
+	}
+	go func() {
+		wg.Wait()
+		close(c)
 	}()
 	return c
 }
