@@ -102,8 +102,6 @@ evaluate,  these are known as the `Coffman Conditions`:
 
 [Locking: Starvation](locking_starvation/main.go)
 
-[Documenting Concurrent APIs](internal/deadlocking/api_design.go)
-
 -----
 
 ## :tent: Communication Sequential Processes
