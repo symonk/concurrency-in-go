@@ -127,5 +127,8 @@ A collective of patterns with explanations can be found below:
 | [02 Basic Channel](hello_world_chan/main.go)              | A simple introduction to channels.                  |
 | [03 Generator](generator/main.go)                         | A python like generator                             |
 | [04 Fan In](fanin/main.go)                                | Fan in multiple goroutines                          |
+| [05 Restore Sequence](restore_sequence/main.go)           | Fan in multiple goroutines with equal yielding      |
+| [06 Select Timeout](select_timeout/main.go)               | Cause a goroutine to terminate conditionally        |
+| [07]
 
 -----
