@@ -10,6 +10,7 @@ The book in question can be purchases to support Katherine via `oreilly` at [Con
 
 # Table of Contents <!-- omit from toc -->
 
+- [:mag\_right: Introduction Materials](#mag_right-introduction-materials)
 - [:tent: Race Conditions](#tent-race-conditions)
 - [:tent: Atomicity](#tent-atomicity)
 - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
@@ -18,6 +19,14 @@ The book in question can be purchases to support Katherine via `oreilly` at [Con
 - [:tent: Patterns](#tent-patterns)
 
 -----
+
+## :mag_right: Introduction Materials
+
+The following materials are critical to understand when learning about concurrency in go:
+
+    - Placeholder
+    - Placeholder
+    - Placeholder
 
 ## :tent: Race Conditions
 
@@ -92,10 +101,6 @@ evaluate,  these are known as the `Coffman Conditions`:
 [Locking: Livelock](locking_livelock/main.go)
 
 [Locking: Starvation](locking_starvation/main.go)
-
-Smart abstractions and documentation are **vital** when concurrency is involved.  An example of how to
-make things easier for developers consuming (or maintaining) your code in future is displayed in the
-`api_design.go` file:
 
 [Documenting Concurrent APIs](internal/deadlocking/api_design.go)
 
