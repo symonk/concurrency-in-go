@@ -20,7 +20,7 @@ func f(left, right chan int) {
 // This is known as the daisy chain pattern and is easier to
 // visualise as the game 'chinese whispers'.
 func main() {
-	const n = 10               // 10 chains in the flow
+	const n = 10000            // 10 chains in the flow
 	leftmost := make(chan int) // the final channel, we get our output from here
 	// assign two channels for now, left and right to leftmost.
 	left := leftmost
