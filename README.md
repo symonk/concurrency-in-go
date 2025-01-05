@@ -16,6 +16,7 @@ The book in question can be purchased to support Katherine via `oreilly` at [Con
 - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
 - [:tent: Communication Sequential Processes](#tent-communication-sequential-processes)
 - [:tent: Synchronisation Primities](#tent-synchronisation-primities)
+- [:tent: Pipelining](#tent-pipelining)
 - [:tent: Patterns](#tent-patterns)
 
 -----
@@ -113,6 +114,22 @@ evaluate,  these are known as the `Coffman Conditions`:
 
 -----
 
+## :tent: Pipelining
+
+While pipelining is considered just another pattern, I feel it warrants an individual 
+topic of its own.  Pipelining is a concurrent program that has multiple `sequential`
+stages that are parallelised internally.  Both a basic and complex example of pipelining
+exist in:
+
+ - [Basic Pipeline](basic_pipeline/main.go)
+ - [Advanced Pipeline](advanced_pipeline/main.go)
+
+Typically within a pipeline, both the first and last stages have a single entry point
+(channel) i.e generating numbers (in) returning the transformed results (out).  Interim
+stages typically take an upstream inbound channel and yield their results to and outbound
+one.
+
+-----
 
 ## :tent: Patterns
 
@@ -129,5 +146,6 @@ A collective of patterns with explanations can be found below:
 | [06 Select Timeout](select_timeout/main.go)               | Cause a goroutine to terminate conditionally        |
 | [07 Quit Signal](quit_signal/main.go)                     | Cancel a goroutine with an channel send             |
 | [08 Daisy Chain](daisy_chain/main.go)                     | A simulation of chinese whispers with goroutines    |
+| [09 Basic Pipeline](basic_pipeline/main.go)               | A simple mathematical example of pipelining         |
 
 -----
