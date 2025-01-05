@@ -32,7 +32,7 @@ func main() {
 		left = right
 	}
 
-	// attempt to read a value from right
+	// push the initial value onto the right channel
 	go func(c chan int) { c <- 1 }(right)
 	// print our final value
 	fmt.Println(<-leftmost)
