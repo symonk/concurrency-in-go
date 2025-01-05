@@ -11,6 +11,7 @@ The book in question can be purchased to support Katherine via `oreilly` at [Con
 # Table of Contents <!-- omit from toc -->
 
 - [:mag\_right: Introduction Materials](#mag_right-introduction-materials)
+- [:eyes: Caveats](#eyes-caveats)
 - [:tent: Race Conditions](#tent-race-conditions)
 - [:tent: Atomicity](#tent-atomicity)
 - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
@@ -28,6 +29,41 @@ The following materials are critical to understand when learning about concurren
     - Placeholder
     - Placeholder
     - Placeholder
+
+## :eyes: Caveats
+
+Understanding the golang memory model is important when dealing with concurrency to fully
+understand why certain things may cause subtle bugs or be head scratching.  Let's take
+one example:
+
+```go
+var a, b int
+
+func f() {
+	a = 1
+	b = 2
+}
+
+func g() {
+	print(b)
+	print(a)
+}
+
+func main() {
+	go f()
+	g()
+}
+```
+
+Seems relatively straight forward?  It is completely possible here that from the reading perspective
+of one goroutine, lets call it goroutine `2` that the writes in another goroutine (`1`) - which invoked
+`f()` asynchronously are not visible **OR** the write assigning b is visible, but a is not!
+
+This code can print out `20` where b is `2` and a is `0`, you may be very confused by that as 
+b was assigned after a, however for various reasons (and lack of synchronisation) such as the compiler
+may even rewrite these lines or the processor may be smart at runtime.
+
+Always use synchronisation primitives when required to ensure correctness.
 
 ## :tent: Race Conditions
 
