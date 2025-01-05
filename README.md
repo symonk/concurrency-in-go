@@ -128,6 +128,6 @@ A collective of patterns with explanations can be found below:
 | [05 Restore Sequence](restore_sequence/main.go)           | Fan in multiple goroutines with equal yielding      |
 | [06 Select Timeout](select_timeout/main.go)               | Cause a goroutine to terminate conditionally        |
 | [07 Quit Signal](quit_signal/main.go)                     | Cancel a goroutine with an channel send             |
-|
+| [08 Daisy Chain](daisy_chain/main.go)                     | A simulation of chinese whispers with goroutines    |
 
 -----
