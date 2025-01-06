@@ -17,6 +17,8 @@ The book in question can be purchased to support Katherine via `oreilly` at [Con
 - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
 - [:tent: Communication Sequential Processes](#tent-communication-sequential-processes)
 - [:tent: Synchronisation Primities](#tent-synchronisation-primities)
+	- [:one: Sync Package](#one-sync-package)
+	- [:two: Placeholder](#two-placeholder)
 - [:tent: Pipelining](#tent-pipelining)
 - [:tent: Patterns](#tent-patterns)
 
@@ -147,6 +149,18 @@ evaluate,  these are known as the `Coffman Conditions`:
 -----
 
 ## :tent: Synchronisation Primities
+
+### :one: Sync Package
+
+The `sync` package offers primarily low level synchronisation primitives.
+Some of the common usages of the `sync` package are `WaitGroup`, various
+flavours of `Mutex (Locker)` types and the `Once` variants aswell as other
+low level primitivies.
+
+[Indepth Standard Library Sync Package](sync_package/main.go)
+
+### :two: Placeholder
+
 
 -----
 
