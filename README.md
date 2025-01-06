@@ -183,5 +183,6 @@ A collective of patterns with explanations can be found below:
 | [07 Quit Signal](quit_signal/main.go)                     | Cancel a goroutine with an channel send             |
 | [08 Daisy Chain](daisy_chain/main.go)                     | A simulation of chinese whispers with goroutines    |
 | [09 Basic Pipeline](basic_pipeline/main.go)               | A simple mathematical example of pipelining         |
+| [10 Advanced Pipeline](advanced_pipeline/main.go)			| A smarter parallel pipeline						  |
 
 -----
