@@ -145,6 +145,18 @@ evaluate,  these are known as the `Coffman Conditions`:
 
 ## :tent: Communication Sequential Processes
 
+Go is modelled (but not entirely) on the ideas of Tony Hoare's 
+`CSP` (Communication Sequential Processing).
+
+[CSP](https://en.wikipedia.org/wiki/Communicating_sequential_processes)
+
+>[!Note]
+> Don't communicate by sharing memory, share memory by communicating!
+
+>[!Note]
+> Go channels/select are powerful CSP primitives, go still offers 
+> typical mutexes etc via the sync package.
+
 
 -----
 
