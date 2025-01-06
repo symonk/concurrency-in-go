@@ -10,16 +10,20 @@ func main() {
 
 }
 
-// onceFunc demonstrates the usage of the sync.Once
-// function.
+// onceFunc utilises sync.OnceFunc
+//
+// sync.OnceFunc wraps a function, returning another function
+// that when invoked is executed but guarantees synchronised
+// run once only semantics, that is multiple goroutines attempting
+// to run the returned func `f` will be blocked until the first
+// routine to call it has finished.
+//
+// if the invocation of f panics, all subsequent calls by other
+// goroutines will also panic.
 func onceFunc() {
-	/*
-		sync.OnceFunc returns a function that when invoked will
-		execute the initial function.  It guarantees that the func
-		provided will be executed only once, regardless of how many
-		goroutines asynchronously attempt to call it.
-	*/
 	var i int
+
+	// NOTE: should f panic, all subsequent asynchronous calls to f will also panic.
 	f := sync.OnceFunc(func() {
 		fmt.Println("this will only run once")
 		i++
