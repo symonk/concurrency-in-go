@@ -7,9 +7,13 @@ import (
 )
 
 func main() {
+	// Once semantics/functions
 	onceFunc()
 	onceValue()
 	onceValues()
+
+	// Conditional Variable
+	cond()
 
 }
 
@@ -110,4 +114,22 @@ func onceValues() {
 	wg.Wait()
 	fmt.Println("called times: ", invoked)
 	fmt.Println("it was true:", <-result)
+}
+
+// conf utilises sync.Cond (sync.NewCond())
+//
+// sync.Cond has an internal sync.Locker type
+// and acts as a 'rendevouz' point for multiple
+// goroutines.
+//
+// NOTE: Cond instances must NOT be copied after use.
+// NOTE: sync.Lockers passed should be passed by ptr
+//
+// The example below waits until the next minute before
+// allowing all of the goroutines to execute.
+func cond() {
+	var mu sync.Mutex
+	c := sync.NewCond(&mu)
+	_ = c
+
 }

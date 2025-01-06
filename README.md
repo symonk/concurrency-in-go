@@ -157,11 +157,10 @@ Some of the common usages of the `sync` package are `WaitGroup`, various
 flavours of `Mutex (Locker)` types and the `Once` variants aswell as other
 low level primitivies.
 
-[Indepth Standard Library Sync Package](sync_package/main.go)
-
- - [sync.OnceFunc]()
- - [sync.OnceValue]()
- - [sync.OnceValues]()
+ - [sync.OnceFunc](sync_package/main.go)
+ - [sync.OnceValue](sync_package/main.go)
+ - [sync.OnceValues](sync_package/main.go)
+ - [sync.Cond](sync_package/main.go)
 
 ### :two: Placeholder
 
