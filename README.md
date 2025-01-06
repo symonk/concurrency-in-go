@@ -159,6 +159,10 @@ low level primitivies.
 
 [Indepth Standard Library Sync Package](sync_package/main.go)
 
+ - [sync.OnceFunc]()
+ - [sync.OnceValue]()
+ - [sync.OnceValues]()
+
 ### :two: Placeholder
 
 
