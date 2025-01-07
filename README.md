@@ -173,6 +173,7 @@ low level primitivies.
  - [sync.OnceValue](sync_package/main.go)
  - [sync.OnceValues](sync_package/main.go)
  - [sync.Cond](sync_package/main.go)
+ - [sync.WaitGroup](waitgroup/main.go)
 
 ### :two: Placeholder
 
