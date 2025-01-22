@@ -17,7 +17,7 @@ The book in question can be purchased to support Katherine via `oreilly` at [Con
 - [:tent: Dead Locking \& Starvation](#tent-dead-locking--starvation)
 - [:tent: Communication Sequential Processes](#tent-communication-sequential-processes)
 - [:tent: Concurrency Building blocks](#tent-concurrency-building-blocks)
-	- [goroutines](#goroutines)
+	- [:one: Goroutines](#one-goroutines)
 - [:tent: Synchronisation Primities](#tent-synchronisation-primities)
 	- [:one: Sync Package](#one-sync-package)
 	- [:two: Placeholder](#two-placeholder)
@@ -164,7 +164,7 @@ Go is modelled (but not entirely) on the ideas of Tony Hoare's
 
 ## :tent: Concurrency Building blocks
 
-### goroutines
+### :one: Goroutines
 
 The `goroutine` is the core building block behind go's excellent concurrency model.  A goroutine is a function that
 is running `concurrently` (maybe in parallel).
