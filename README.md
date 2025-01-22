@@ -36,6 +36,9 @@ The following materials are critical to understand when learning about concurren
 
 ## :eyes: Caveats
 
+> [Note!]
+> Please read https://go.dev/ref/mem (critical)
+
 Understanding the golang memory model is important when dealing with concurrency to fully
 understand why certain things may cause subtle bugs or be head scratching.  Let's take
 one example:
@@ -169,7 +172,7 @@ Go is modelled (but not entirely) on the ideas of Tony Hoare's
 The `goroutine` is the core building block behind go's excellent concurrency model.  A goroutine is a function that
 is running `concurrently` (maybe in parallel).
 
-> Note!
+> [Note!]
 > A goroutine is not guaranteed to be running in parallel, you may have a single core machine!
 
  - [Hello World Goroutine](goroutine/main.go)
