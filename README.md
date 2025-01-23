@@ -238,6 +238,10 @@ the system would be completely overloaded much faster.
  goroutines when the coroutines must be suspended/reentered etc, but its another win for go in that it is less
  costly.
 
+ Here we can see a performance increase of over `90%` compared to switching OS threads on my machine on linux:
+
+ - [Goroutine Context Switching Performance](goroutine_context_switching/main.go)
+
 -----
 
 ## :tent: Synchronisation Primities
