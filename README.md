@@ -18,6 +18,7 @@ The book in question can be purchased to support Katherine via `oreilly` at [Con
 - [:tent: Communication Sequential Processes](#tent-communication-sequential-processes)
 - [:tent: Concurrency Building blocks](#tent-concurrency-building-blocks)
 	- [:one: Goroutines](#one-goroutines)
+	- [Context Switching](#context-switching)
 - [:tent: Synchronisation Primities](#tent-synchronisation-primities)
 	- [:one: Sync Package](#one-sync-package)
 	- [:two: Placeholder](#two-placeholder)
@@ -230,6 +231,12 @@ the system would be completely overloaded much faster.
 
  > [!Caution]
  > Because you can, doesn't mean you should! Switching between this many routines will have a heavy penalty!
+
+ ### Context Switching
+
+ In the world of os threads, context switching can be pretty costly.  It's not to say that it also cannot hurt
+ goroutines when the coroutines must be suspended/reentered etc, but its another win for go in that it is less
+ costly.
 
 -----
 
