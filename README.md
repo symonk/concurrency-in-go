@@ -209,6 +209,28 @@ access / read variables in their scope when running closures for exmaple:
 
  - [Goroutine Address Space](goroutine_address_space/main.go)
 
+ Go's compiler will take care of keeping variables in scope to avoid goroutines accessing garbage
+ collected memory.
+
+`Goroutines` are extremely efficient, a fresh goroutine is only given a few kilobytes (2KB at
+the time of writing this) which in most cases is often enough for the task.  If it isn't  the
+go runtime will grow (and shrink) the memory for storing the goroutines stack automatically.
+
+This allows go programs to use very little memory in comparison and it is practical to create
+hundreds if not thousands of goroutines in the same address space.  If goroutines were threads
+the system would be completely overloaded much faster.
+
+ - [Goroutine Bootstrap Memory](goroutine_memory/main.go)
+
+ In the example above, we created 10k goroutines on our system, using a simple 64 bit CPU with 32GB
+ of memory.  The 10k routines took up a total of `2.59KB` per goroutine.  Without using swap space
+ on this system, it would in theory be possible (if their stacks didn't need to grow ofcourse) to
+ spawn a total of `2^5 (~32GB)` of ram => `12_350_000+` (yes, 12.3 **million**) goroutines without
+ using swap space!
+
+ > [!Caution]
+ > Because you can, doesn't mean you should! Switching between this many routines will have a heavy penalty!
+
 -----
 
 ## :tent: Synchronisation Primities
