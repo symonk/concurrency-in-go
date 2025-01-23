@@ -20,7 +20,7 @@ func main() {
 	var wg sync.WaitGroup
 	noop := func() { wg.Done(); <-c } // block indefinitely so we can keep all the spawned ones alive to check memory.
 
-	const numGoroutines = 1e5
+	const numGoroutines = 1e4 // Lets create 10_000 routines.
 	wg.Add(numGoroutines)
 	before := memoryUsed() // Before we spawn, capture the memory used.
 	for i := numGoroutines; i > 0; i-- {
