@@ -202,7 +202,7 @@ is running `concurrently` (maybe in parallel).
  > [!Caution]
  > Time.Sleep does NOT create a join point, avoid attempting to use it as one.
 
-  - TODO: Insert visual of the fork join concurrency model here.
+ - [A simple join point](fork_join_point/main.go)
 
 -----
 
