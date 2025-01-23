@@ -204,6 +204,11 @@ is running `concurrently` (maybe in parallel).
 
  - [A simple join point](fork_join_point/main.go)
 
+`Goroutines` operate in the same address space in which they were created, this means they can 
+access / read variables in their scope when running closures for exmaple:
+
+ - [Goroutine Address Space](goroutine_address_space/main.go)
+
 -----
 
 ## :tent: Synchronisation Primities
