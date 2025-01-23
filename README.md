@@ -177,6 +177,30 @@ is running `concurrently` (maybe in parallel).
 
  - [Hello World Goroutine](goroutine/main.go)
 
+ The `goroutine` in go is **NOT** an OS thread, but is also not considered a `green` thread (A thread that
+ is managed by the languages runtime).  They are infact a higher level of abstraction known as `coroutines`.
+
+ A `coroutine` is simply a concurrent subroutine (think function, method, closures etc) that are not 
+ `preemptive` (they cannot be interrupted).  Instead there are various points in their lifecycle where
+ they can be stopped or enables re-entry.
+
+ One of the beauties of go is that the goroutines are heavily managed by the go runtime and is abstracted
+ away from the users.  The go runtime can inspect goroutines at runtime to detect operations that would
+ block (and resume) and suspend/re-enter respectively.
+
+ Go's mechanism for hosting goroutines is an implementation of whats called an `M:N scheduler`.  This means
+ it maps `M` _green-threads_ -> `N` _operating system threads_.  When more goroutines are spawned than there
+ are _green threads_ the go scheduler will handle the distribution of the goroutines across the available
+ threads and for ones that block, ensure others can run.
+
+ > [!Note]
+ > More on the go scheduler later, see the topic -> The Go Runtime Scheduler.
+
+ > [!Note]
+ > Go uses the fork-join model of concurrency.
+
+  - TODO: Insert visual of the fork join concurrency model here.
+
 -----
 
 ## :tent: Synchronisation Primities
