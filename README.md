@@ -240,7 +240,7 @@ the system would be completely overloaded much faster.
 
  Here we can see a performance increase of over `90%` compared to switching OS threads on my machine on linux:
 
- - [Goroutine Context Switching Performance](goroutine_context_switching/main.go)
+ - [Goroutine Context Switching Performance](goroutine_context_switching/main_test.go)
 
 -----
 
