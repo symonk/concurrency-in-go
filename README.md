@@ -19,6 +19,9 @@ The book in question can be purchased to support Katherine via `oreilly` at [Con
 - [:tent: Concurrency Building blocks](#tent-concurrency-building-blocks)
 	- [:one: Goroutines](#one-goroutines)
 	- [Context Switching](#context-switching)
+	- [:two: Waitgroups](#two-waitgroups)
+	- [:three: Mutexes](#three-mutexes)
+	- [:four: Conditions](#four-conditions)
 - [:tent: Synchronisation Primities](#tent-synchronisation-primities)
 	- [:one: Sync Package](#one-sync-package)
 	- [:two: Placeholder](#two-placeholder)
@@ -256,6 +259,15 @@ Another synchronisation primitive, most familiar to those from other languages t
 synchronisation outside of CSP.
 
  - [Sync Mutex & RWMutex](mutexes/main.go)
+
+ ### :four: Conditions
+
+ A `sync.Cond` is a mechanism for creating a redezvous point for multiple goroutines that be alerted/awoken
+ by a particular `event`.  By event, we essentially mean a signal of some sort that it is 'ok to proceed'.
+ The `sync.Cond` type can signal a single goroutine (of potentially all the ones waiting) or tell them
+ all that is ok to proceed.
+
+  - [Sync Condition](condition/main.go)
 
 -----
 
