@@ -241,6 +241,8 @@ the system would be completely overloaded much faster.
  Here we can see a performance increase of over `90%` compared to switching OS threads on my machine on linux:
 
  - [Goroutine Context Switching Performance](goroutine_context_switching/main_test.go)
+ - [Sync WaitGroup](waitgroup/main.go)
+ - [Sync Mutex & RWMutex](mutexes/main.go)
 
 -----
 
@@ -257,7 +259,6 @@ low level primitivies.
  - [sync.OnceValue](sync_package/main.go)
  - [sync.OnceValues](sync_package/main.go)
  - [sync.Cond](sync_package/main.go)
- - [sync.WaitGroup](waitgroup/main.go)
 
 ### :two: Placeholder
 
