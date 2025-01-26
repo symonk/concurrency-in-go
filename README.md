@@ -241,7 +241,20 @@ the system would be completely overloaded much faster.
  Here we can see a performance increase of over `90%` compared to switching OS threads on my machine on linux:
 
  - [Goroutine Context Switching Performance](goroutine_context_switching/main_test.go)
+  
+### :two: Waitgroups
+
+A waitgroup is an atomic counter that allows waiting for a collection of goroutines to finish.
+This is useful only if you do not care about routine return values, or if you do you have another
+mechanism for collecting them:
+
  - [Sync WaitGroup](waitgroup/main.go)
+  
+### :three: Mutexes
+
+Another synchronisation primitive, most familiar to those from other languages that handle
+synchronisation outside of CSP.
+
  - [Sync Mutex & RWMutex](mutexes/main.go)
 
 -----

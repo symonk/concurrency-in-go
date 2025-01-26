@@ -2,7 +2,11 @@ package main
 
 import (
 	"fmt"
+	"math"
+	"os"
 	"sync"
+	"text/tabwriter"
+	"time"
 )
 
 // main outlines the use cases and differences between
@@ -51,6 +55,51 @@ func readWriteMutex() {
 
 }
 
+// readonlyMutex demonstrates the uplift you can get if you have a
+// scenario where reads are more frequent than writes.  An unlimited
+// number of readers can access the RW mutex, it is only locked if
+// a writer is acquiring the lock.
 func readOnlyMutex() {
 
+	producerFunc := func(wg *sync.WaitGroup, mu sync.Locker) {
+		defer wg.Done()
+		for i := 5; i > 0; i-- {
+			mu.Lock()
+			defer mu.Unlock()
+			time.Sleep(time.Second)
+		}
+	}
+
+	observerFunc := func(wg *sync.WaitGroup, mu sync.Locker) {
+		defer wg.Done()
+		mu.Lock()
+		defer mu.Unlock()
+	}
+
+	test := func(count int, mutex, rwMutex sync.Locker) time.Duration {
+		var wg sync.WaitGroup
+		start := time.Now()
+		go producerFunc(&wg, mutex)
+		for i := count; i > 0; i-- {
+			go observerFunc(&wg, rwMutex)
+		}
+		wg.Wait()
+		return time.Since(start)
+	}
+
+	tw := tabwriter.NewWriter(os.Stdout, 0, 1, 2, ' ', 0)
+	defer tw.Flush()
+
+	var rw sync.RWMutex
+	fmt.Fprintf(tw, "Readers\tRWMutex\tMutex\t\n")
+	for i := 0; i < 20; i++ {
+		count := int(math.Pow(2, float64(i)))
+		fmt.Fprintf(
+			tw,
+			"%d\t%v\t%v\n",
+			count,
+			test(count, &rw, rw.RLocker()),
+			test(count, &rw, &rw),
+		)
+	}
 }
