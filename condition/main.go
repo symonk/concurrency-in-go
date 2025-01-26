@@ -66,16 +66,20 @@ func secondStillNaiveImplementation() {
 // Understand `Wait` carefully, it actually Unlocks the underlying mutex
 // of the Cond when entering it, and then relocks it when it is awoken.
 // this can seem like an odd side effect at first.
+//
+// This uses .Signal() to alert a single goroutine, however you can alert
+// all by using the .Broadcast() method.
 func thirdUtilisingSyncCond() {
 	defer fmt.Println("condition was finally true")
 	var condition bool
+	var m sync.Mutex
+	c := sync.NewCond(&m)
 
 	go func() {
 		time.Sleep(5 * time.Second)
 		condition = true
+		c.Signal()
 	}()
-	var m sync.Mutex
-	c := sync.NewCond(&m)
 	c.L.Lock() // Wait does not do this, we must lock first!
 	for condition == false {
 		c.Wait()
